@@ -1,0 +1,339 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" />
+</head>
+<body class="h-screen">
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[99%] mx-auto ">
+            <div>
+                <img class="w-16 cursor-pointer p-1" src="./no-sugar.png" alt="...">
+            </div>
+            <div class="md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li>
+                        <a class="hover:text-gray-500" href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLinkAbout" data-dropdown-toggle="dropdownNavbarAbout" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">About<svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                        <!-- Dropdown menu for "About" -->
+                        <div id="dropdownNavbarAbout" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                            <ul class="py-1" aria-labelledby="dropdownNavbarLinkAbout">
+                                <li>
+                                    <a href="./about.html" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">About Conference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Dates of Importance</a>
+                                </li>
+                                <li>
+                                    <a href="./team.html" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Organising Committee</a>
+                                </li>
+                                <li>
+                                    <a href="./speakers.html" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Conference Speakers</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLinkPaper" data-dropdown-toggle="dropdownNavbarPaper" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover-bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover-text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Call for Paper<svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                        <!-- Dropdown menu for "Call for Paper" -->
+                        <div id="dropdownNavbarPaper" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                            <ul class="py-1" aria-labelledby="dropdownNavbarLinkPaper">
+                                <li>
+                                    <a href="./paperFormat.html" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Papers Format</a>
+                                    <!-- dropdowns for paper format -->
+
+                                    <ul class="py-1" aria-labelledby="dropdownNavbarLinkAbout">
+                                        <li>
+                                            <a href="./about.html" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Abstract Format</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Full Paper Format</a>
+                                        </li>
+                                        <li>
+                                            <a href="./team.html" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Poster Format</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Paper Submission</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Mode of Presentation</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLinkRegistration" data-dropdown-toggle="dropdownNavbarRegistration" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover-bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover-text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Registration<svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                        <!-- Dropdown menu for "Registration" -->
+                        <div id="dropdownNavbarRegistration" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                            <ul class="py-1" aria-labelledby="dropdownNavbarLinkRegistration">
+                                <li>
+                                    <a href="https://rb.gy/37e9w" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Offline Registration</a>
+                                </li>
+                                <li>
+                                    <a href="https://rb.gy/37e9w" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Online Registration</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="./schedule.html">Technical Programmes</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="./travel.html">Travel</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="./accomodation.html">Accommodation</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="./sponser.html">Sponsorship</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+        </nav>
+    </header>
+    
+<section class="bg-white w-full h-2/3" style="background-image: url('./image/nitp main .jpeg'); background-size: cover;opacity:0.8;background-repeat: no-repeat;">
+    <div class="flex flex-col items-center space-y-8 lg:space-y-32 px-4 lg:px-0">
+        <div class="justify-center mt-20">
+            <h1 class="font-mullish font-extrabold text-4xl text-white text-center">INTERNATIONAL CONFERENCE ON CLIMATE CHANGE CULTURAL HERITAGE &<br><br>SUSTAINABLE HABITAT</h1>
+        </div>
+
+        <div class="m-4 text-center gap-4">
+            <!-- <table class="min-w-full bg-transparent font-bold border-2 border-cyan-200 lg:w-6/12">
+                <tbody class="text-center text-2xl">
+                    <tr>
+                        <td class="border px-4 py-2 text-red-600">January 27 to 28, 2024</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2 border-teal-400 hover:scale-105 cursor-pointer duration-300">
+                            <h2 class="text-black font-extrabold">DEPARTMENT OF ARCHITECTURE AND PLANNING, <br>NATIONAL INSTITUTE OF TECHNOLOGY PATNA, BIHAR, INDIA</h2>
+                        </td>
+                    </tr>
+                </tbody>
+            </table> -->
+        </div>
+
+        <!-- <div class="text-center w-full lg:w-10/12 flex flex-col justify-center items-center">
+            <div>
+                <h1 class="font-mullish font-bold text-2xl lg:text-4xl text-indigo-200">IMPORTANT DATES SUBMISSION</h1>
+            </div>
+
+            <div class="container mx-auto mt-4 text-center">
+                <table class="min-w-full bg-transparent font-bold border-2 border-cyan-200 lg:w-6/12">
+                    <tbody class="text-center text-2xl">
+                        <tr>
+                            <td class="border px-4 py-2 text-red-600">September 18, 2023</td>
+                            <td class="border px-4 py-2 text-red-600">November 06, 2023</td>
+                            <td class="border px-4 py-2 text-red-600">November 27, 2023</td>
+                            <td class="border px-4 py-2 text-red-600">December 18, 2023</td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2 text-teal-300 hover:scale-105 cursor-pointer duration-300">Call for papers</td>
+                            <td class="border px-4 py-2 text-teal-300 hover:scale-105 cursor-pointer duration-300">Abstract Submission</td>
+                            <td class="border px-4 py-2 text-teal-300 hover:scale-105 cursor-pointer duration-300">Abstract Notification</td>
+                            <td class="border px-4 py-2 text-teal-300 hover:scale-105 cursor-pointer duration-300">Full paper Submission</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+        </div> -->
+    </div>
+</section>
+<!---THe conference-->
+<section class="">
+    <div class="py-6">
+        <h2 class="text-center text-2xl font-bold pl-1" style="background: repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px); background-size: 10px 100%; height: auto; background-repeat: repeat;">
+            The Conference
+        </h2>
+        <div class="grid grid-cols-1  lg:grid lg:grid-cols-1 mg:flex md:flex-col  pb-3 p-3 mx-auto items-center space-x-4 px-32 " id="institute">
+            
+            <div class=" ">
+                <p style="margin-left: 0;" class="text-xl">
+                    Welcome to the International Conference on “Climate Change Cultural Heritage & Sustainable Habitat” – Uniting for a Sustainable Future!
+                    In a world facing unprecedented environmental challenges, we are proud to invite you to a gathering of brilliant minds and passionate individuals dedicated to addressing one of the most critical issues of our time: climate change, to understand its impact on Cultural Heritage and Habitat.
+                    Our conference aims to foster a global dialogue, bringing together climate scientists, urban planners, conservation architects, academicians, activists, researchers and policy makers from every corner of the globe. Together, we will explore innovative solutions, share groundbreaking research, and catalyse collective action to combat the urgent threats posed by climate change on cultural heritage and habitat.
+                    This conference will serve as a platform for knowledge exchange, collaboration, and inspiration for building a sustainable future. It is a call to debate and recognize our shared responsibility in safeguarding our planet's future.
+                    Join us as we embark on a transformative journey towards a more sustainable and resilient world. Together, we can turn the tide on climate change and its impact on cultural heritage and habitat for forging towards a more significant, brighter, cleaner and equitable future for generations to come.
+                    Be part of the change. Be part of the solution. Welcome to the International Conference on Climate Change, Cultural Heritage and Sustainable Habitat. 
+                </p>
+            </div>
+        </div>
+        
+    </div>
+
+</section>
+
+<!--about NIT-->
+<div class="w-full">
+<section>
+    <div class="py-6">
+        <h2 class="text-center text-xl font-bold pl-1" style="background: repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px); background-size: 10px 100%; height: auto; background-repeat: repeat;">
+            National Institute Of Technology <br> Patna (Bihar), India
+        </h2>
+        <div class="grid grid-cols-2  lg:grid lg:grid-cols-2 mg:flex md:flex-col  pb-3 p-3 mx-auto items-center space-x-4 px-32 " id="institute">
+            <div class="pt-3">
+                <img class="w-2/3" src="data:image/jpeg;base64,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"  alt="" />
+            </div>
+            <div class="">
+                <p style="margin-left: 0; text-align: left;" class="text-xl">
+                    National Institute of Technology Patna is the 18th National Institute of Technology created by the Ministry of H.R.D. Government of India after rechristening the erstwhile Bihar College of Engineering Patna on 28. 01. 2004. NIT Patna marked its humble beginning in 1886 with the establishment of the pleaders' survey training school which was subsequently promoted to Bihar College of Engineering Patna in 1924. This made this institute the 6th Oldest Engineering Institute of India. The institute is situated on the south bank of the holy river Ganges behind Gandhi Ghat, one of the most important and reverential places of Patna.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+    <!-- Contact-->
+    <div class="lg:grid lg:grid-cols-2 md:flex-col bg-blue-200 h-1/3">
+        <div class="p-4 flex flex-col pb-4 shadow-sm">
+          <div class="text-left pl-4">
+            <div class="text-left flex flex-row" style="background: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px); background-size: 10px 100%; height: auto; background-repeat: repeat;">
+              <div class="h-15">
+                <img src="https://cdn.pixabay.com/photo/2013/07/13/14/05/location-162102_640.png" class="h-6 w-13 pl-2 pt-2" />
+              </div>
+              <div class="pl-2">
+                <h2 class="text-xl font-semibold">Location</h2>
+              </div>
+            </div>
+            <hr class="border-2 bg-slate-700">
+          </div>
+      
+          <br/>
+          <div class="text-left"> 
+            <p class="text-left pl-4">
+              Department of Architecture & Planning.,<br/>
+              National Institute Of Technology Patna,<br/>
+              Ashok Rajpath, Patna - 800005.
+            </p>
+          </div>
+        </div>
+      
+        <div class="p-4 flex flex-col pb-4 shadow-sm">
+          <div class="text-left pl-4">
+            <div class="text-left flex flex-row" style="background: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px); background-size: 10px 100%; height: auto; background-repeat: repeat;">
+              <div class="justify-left">
+                <img src="https://cdn.pixabay.com/photo/2013/07/13/14/05/location-162102_640.png" class="h-6 w-13 pl-2 pt-2" />
+              </div>
+              <div class="pl-2">
+                <h2 class="text-xl font-semibold">Contact</h2>
+              </div>
+            </div>
+            <hr class="border-2 bg-slate-700">
+          </div>
+      
+          <br/>
+          <div class="text-left pl-4"> 
+            <p class="text-left py-2">
+              Conference Secretariat,<br/>
+              CCCHSH - 2024,<br/>
+              National Institute Of Technology Patna, <br/>
+              Ashok Rajpath, Patna - 800005, <br>
+              (Bihar) India.
+              <br/>
+              Email: <a href="mailto:ccchsh.conf@nitp.ac.in" class="underline">ccchsh.conf@nitp.ac.in</a>
+            </p>
+          </div>
+        </div>    
+      </div>
+      
+    </div>
+
+<!--Footer-->
+    <footer class="bg-white dark:bg-gray-900">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-between">
+            <div class="flex flex-col space-y-2 sm:gap-6 sm:grid-cols-3">
+                <div class="mb-6 md:mb-0">
+                    <a href="./index.html" class="flex items-center">
+                        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="FlowBite Logo" />
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">CCCHSH-2024</span>
+                    </a>
+                </div>
+                <div class="mb-6 md:mb-0">
+                    <a href="https://www.google.com/maps/place/National+Institute+of+Technology,+Patna/@25.6207961,85.1719948,17z/data=!3m1!4b1!4m6!3m5!1s0x39ed58dce6732867:0x4059f39a1ac82f06!8m2!3d25.6207961!4d85.1719948!16zL20vMDl2OGJq?entry=ttu" class="flex items-center">
+                        <img src="./image/google-maps.png" class="h-8 mr-3" alt="FlowBite Logo" /><p class="text-white">NIT Patna</p>
+                    </a>
+                </div>
+                <div class="mb-6 md:mb-0">
+                    <h1 class="text-lg font bold text-white">Contact Us :-<span href="ccchsh.conf@nitp.ac.in" class="text-blue-700 px-4">ccchsh.conf@nitp.ac.in</span>
+                    </h1>
+                    </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Home</h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <a href="https://rb.gy/37e9w" class="hover:underline ">The Conference
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./schedule.html" class="hover:underline">NIT Patna</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">About Us</h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <a href="https://rb.gy/37e9w" class="hover:underline ">Registration</a>
+                        </li>
+                        <li>
+                            <a href="./schedule.html" class="hover:underline">Schedule</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">CCCHSH™</a>. All Rights Reserved.
+            </span>
+            <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
+                <p class="text-gray-600 font-bold">Designed & Maintained by - Akash Saurav & Deepak Kumar</p>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    
+    
+    
+    <!-- script for small-sized menu -->
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
+
+    <!-- script for dropdown of 'Call for Papers' -->
+    <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+  
+</body>
+</html>

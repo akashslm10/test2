@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="global.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+<body class="">
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[99%] mx-auto ">
+            <div>
+                <img class="w-16 cursor-pointer p-1" src="./no-sugar.png" alt="...">
+            </div>
+            <div class="md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li>
+                        <a class="hover:text-gray-500" href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLinkAbout" data-dropdown-toggle="dropdownNavbarAbout" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">About<svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                        <!-- Dropdown menu for "About" -->
+                        <div id="dropdownNavbarAbout" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                            <ul class="py-1" aria-labelledby="dropdownNavbarLinkAbout">
+                                <li>
+                                    <a href="./about.html" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">About Conference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Dates of Importance</a>
+                                </li>
+                                <li>
+                                    <a href="./team.html" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Organising Committee</a>
+                                </li>
+                                <li>
+                                    <a href="./speakers.html" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Conference Speakers</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLinkPaper" data-dropdown-toggle="dropdownNavbarPaper" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover-bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover-text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Call for Paper<svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                        <!-- Dropdown menu for "Call for Paper" -->
+                        <div id="dropdownNavbarPaper" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                            <ul class="py-1" aria-labelledby="dropdownNavbarLinkPaper">
+                                <li>
+                                    <a href="./paperFormat.html" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Papers Format</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Paper Submission</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Mode of Presentation</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLinkRegistration" data-dropdown-toggle="dropdownNavbarRegistration" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover-bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover-text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Registration<svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                        <!-- Dropdown menu for "Registration" -->
+                        <div id="dropdownNavbarRegistration" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                            <ul class="py-1" aria-labelledby="dropdownNavbarLinkRegistration">
+                                <li>
+                                    <a href="https://rb.gy/37e9w" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Offline Registration</a>
+                                </li>
+                                <li>
+                                    <a href="https://rb.gy/37e9w" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Online Registration</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="./schedule.html">Technical Programmes</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="./travel.html">Travel</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="./accomodation.html">Accommodation</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="./sponser.html">Sponsorship</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+        </nav>
+    </header>
+
+    <div class="bg-gray-100">
+        <!--  About Page-->
+
+        <!--  --------  -->
+        
+        <!-- Our story page-->
+        <div class="px-20 py-5 blinking-text" style="background: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px); background-size: 10px 100%; height: auto; background-repeat: repeat;">
+            <h1 class="text-6xl text-black font-bold items-center justify-center text-center">About Us</h1>
+        </div>
+        <div class="grid-cols-2 px-20 pb-20 pt-10 space-y-2 lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-2 space-x-8">
+            <div class="shadow-md shadow-emerald-700 border-2">
+                <h1 class="text-4xl text-black mb-8 font-semibold p-3 shadow-md shadow-red-400 text-center" >National Institute of Technology</h1>
+                <p class="text-gray-800 tracking-wide text-justify p-3">National Institute of Technology Patna is the 18th National Institute of Technology created by the Ministry of H.R.D. Government of India after rechristening the erstwhile Bihar College of Engineering Patna on 28. 01. 2004. NIT Patna marked its humble beginning in 1886 with the establishment of pleaders survey training school which was subsequently promoted of Bihar College of Engineering Patna in 1924. This made this institute the 6th Oldest Engineering Institute of India. The graduate level curriculum was later elevated to the post graduate level in 1978. The institute is situated on the south bank of holy river Ganges behind Gandhi Ghat, one of the most important and reverential place of Patna. The Gandhi Ghat is associated with the immersion of ashes of father of the Nation Mahatma Gandhi in the river Ganges. The campus has a picturesque river view with historic building presenting a spectacle of architectural delight and natural beauty. National Institute of Technology Patna has been declared as an Institute of National Importance and has been granted a fully Autonomous Status by MHRD, Government of India. The Institute has also been declared as a Centre of Excellence of impart high level education training , research and development in science, engineering technology and humanities. It is imparting high quality education & values at UG (B.Tech), PG (M.Tech) & Ph .D programmes through its experienced faculty well versed in their respective field of engineering an technology with well equipped laboratories . At present the Institute has seven disciplines viz. Architecture, Civil Engineering, Compute Science & Engg., Electrical Engg., Electronics & Communication Engg., Information Technology and Mechanical Engg., and well established departments of physics, Mathematics and Humanities and Social Science. National Institute of Technology Patna aims at setting out very high education standards and holds long record of academic excellence. The pedagogical aspects have been formulated to suit not only the needs of the contemporary industrial requirements but also to develop human potential to its fullest extent in a range of professions. Extra curricular activities are planed through games and sports, cultural programmes and NSS activities. Cultural activities provide a platform to know about the culture of various states and regions of the country and opportunity for national integration. Ever since its rechristening, NIT Patna has been on the fast track of development and has undergone numerous facelifts because of which placement records have witnessed unprecedented growth and is touching new heights as the graph of placement is increasing remarkably.</p>
+            </div>
+            <div class="shadow-emerald-700 shadow-md border-2">
+                <h1 class="text-4xl text-black mb-8 font-semibold p-3 shadow-md shadow-red-400 text-center">Department of Architecture and Planning</h1>
+                <p class="text-gray-800 tracking-wide text-justify p-3">The Department of Architecture was established in the Bihar College of Engineering (BCE) Patna in the year 1979 under Patna University. It was the first time that architectural education had commenced in Bihar. When BCE Patna was rechristened as National Institute of Technology Patna on 28th January 2004, it came under the control of Ministry of Human Resource Development (MHRD), Government of India. The Department of Architecture and Planning offers programmes in Bachelor of Architecture (B.Arch.), Master of Urban and Regional Planning (MURP), Master of Architecture (Sustainable Architecture) and Ph.D. in Architecture and Planning. The B.Arch. course, apart from ful¬filling the functional requirements, leads towards creativity, innovation and aesthetics in the approach for design of buildings and its environments. The postgraduate course in Master of Urban and Regional Planning, which commenced from 2012-13, imparts knowledge of urban and regional planning, green infrastructure, environment planning, sustainability and energy efficient aspects in urban and regional planning. It emphasizes on creating new ideas and innovative concepts of physical / spatial planning in the present scenario. The nomenclature of Department of Architecture gets changed to Department of Architecture and Planning in the year 2020. This course is affiliated by Institute of Town Planners, India. The M.Arch. programme stated in 2019-2020, the nomenclature of this post graduate programme was changed to Master of Architecture (Sustainable Architecture) from session 2022-23. The Course content focused more on environmental issues related to built environment, ecology, energy conscious built structure, Artificial Intelligence, Building Simulation and different means of passive architectural methods. The Ph.D. programme started in year 2009 with research areas in Architecture, Urban Planning, Regional Planning, Environmental Planning, Transport Planning, Architectural Conservation, Landscape, Housing, Healthcare Architecture and Construction Planning Management, etc.</p>
+            </div>
+            <!-- buttons-->
+            <div class="">
+                <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
+                    <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                        <a href="https://www.nitp.ac.in/">NIT Patna</a>
+                    </span>
+                  </button>
+            </div>
+            <div class="">
+                <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
+                    <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                        <a href="https://www.nitp.ac.in/arch">Architecture Dept.</a>
+                    </span>
+                  </button>
+            </div>
+            
+        </div>
+        
+    </div>
+    <!-- footer -->
+
+    <footer class="bg-white dark:bg-gray-900">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-between">
+            <div class="flex flex-col space-y-2 sm:gap-6 sm:grid-cols-3">
+                <div class="mb-6 md:mb-0">
+                    <a href="./index.html" class="flex items-center">
+                        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="FlowBite Logo" />
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">CCCHSH-2024</span>
+                    </a>
+                </div>
+                <div class="mb-6 md:mb-0">
+                    <a href="https://www.google.com/maps/place/National+Institute+of+Technology,+Patna/@25.6207961,85.1719948,17z/data=!3m1!4b1!4m6!3m5!1s0x39ed58dce6732867:0x4059f39a1ac82f06!8m2!3d25.6207961!4d85.1719948!16zL20vMDl2OGJq?entry=ttu" class="flex items-center">
+                        <img src="./image/google-maps.png" class="h-8 mr-3" alt="FlowBite Logo" /><p class="text-white">NIT Patna</p>
+                    </a>
+                </div>
+                <div class="mb-6 md:mb-0">
+                    <h1 class="text-lg font bold text-white">Contact Us :-<span href="ccchsh.conf@nitp.ac.in" class="text-blue-700 px-4">ccchsh.conf@nitp.ac.in</span>
+                    </h1>
+                    </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Home</h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <a href="https://rb.gy/37e9w" class="hover:underline ">The Conference
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./schedule.html" class="hover:underline">NIT Patna</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">About Us</h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <a href="https://rb.gy/37e9w" class="hover:underline ">Registration</a>
+                        </li>
+                        <li>
+                            <a href="./schedule.html" class="hover:underline">Schedule</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">CCCHSH™</a>. All Rights Reserved.
+            </span>
+            <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
+                <p class="text-gray-600 font-bold">Designed & Maintained by - Akash Saurav & Deepak Kumar</p>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    
+    <!-- script for small sized menu -->
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
+
+    <!-- script for dropdown of 'Call for Papers' -->
+    <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+
+  
+</body>
+</html>

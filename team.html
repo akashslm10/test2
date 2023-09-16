@@ -1,0 +1,486 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+<body class="bg-gradient-to-b from-blue-950 to-blue-300">
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[99%] mx-auto ">
+            <div>
+                <img class="w-16 cursor-pointer p-1" src="./no-sugar.png" alt="...">
+            </div>
+            <div class="md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li>
+                        <a class="hover:text-gray-500" href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLinkAbout" data-dropdown-toggle="dropdownNavbarAbout" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">About<svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                        <!-- Dropdown menu for "About" -->
+                        <div id="dropdownNavbarAbout" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                            <ul class="py-1" aria-labelledby="dropdownNavbarLinkAbout">
+                                <li>
+                                    <a href="./about.html" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">About Conference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Dates of Importance</a>
+                                </li>
+                                <li>
+                                    <a href="./team.html" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Organising Committee</a>
+                                </li>
+                                <li>
+                                    <a href="./speakers.html" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Conference Speakers</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLinkPaper" data-dropdown-toggle="dropdownNavbarPaper" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover-bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover-text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Call for Paper<svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                        <!-- Dropdown menu for "Call for Paper" -->
+                        <div id="dropdownNavbarPaper" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                            <ul class="py-1" aria-labelledby="dropdownNavbarLinkPaper">
+                                <li>
+                                    <a href="./paperFormat.html" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Papers Format</a>
+                                    <!-- dropdowns for paper format -->
+
+                                    <ul class="py-1" aria-labelledby="dropdownNavbarLinkAbout">
+                                        <li>
+                                            <a href="./about.html" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Abstract Format</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Full Paper Format</a>
+                                        </li>
+                                        <li>
+                                            <a href="./team.html" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Poster Format</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Paper Submission</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Mode of Presentation</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLinkRegistration" data-dropdown-toggle="dropdownNavbarRegistration" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover-bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover-text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Registration<svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                        <!-- Dropdown menu for "Registration" -->
+                        <div id="dropdownNavbarRegistration" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                            <ul class="py-1" aria-labelledby="dropdownNavbarLinkRegistration">
+                                <li>
+                                    <a href="https://rb.gy/37e9w" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Offline Registration</a>
+                                </li>
+                                <li>
+                                    <a href="https://rb.gy/37e9w" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Online Registration</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="./schedule.html">Technical Programmes</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="./travel.html">Travel</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="./accomodation.html">Accommodation</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="./sponser.html">Sponsorship</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+        </nav>
+    </header>
+
+    <!--  Team Page  -->
+    <div class="px-20 py-5 blinking-text" style="background: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px); background-size: 10px 100%; height: auto; background-repeat: repeat;">
+        <h1 class="text-6xl text-gray-200 font-bold items-center justify-center text-center">Organizing Committee</h1>
+    </div>
+    <!-- 1st row -->
+    <div class="flex items-center justify-center">
+        <div class="container ">
+            <div class="grid-cols-3 p-20 space-y-2 lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-4 ">
+                <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-end px-4 pt-4">
+                        <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
+                            <span class="sr-only">Open dropdown</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                                <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./image/Prof. Pradip Kumar Jain.jpg" alt="Bonnie image"/>
+                        <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Prof. Pradip Kumar Jain</h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Director, NIT Patna</span>
+                        <span class="text-md text-gray-500 dark:text-gray-400 underline">Patron</span>
+                        <div class="flex mt-4 space-x-3 md:mt-6">
+                            <a href="https://www.nitp.ac.in/administration?tab=director" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Know More</a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-end px-4 pt-4">
+                        <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
+                            <span class="sr-only">Open dropdown</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                                <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./image/Prof. Manoj Kumar.png" alt="Bonnie image"/>
+                        <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Prof. Manoj Kumar</h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Head, Dept. of Arch and Planning, NIT Patna</span>
+                        <span class="text-md text-gray-500 dark:text-gray-400 underline">General Chair</span>
+                        <div class="flex mt-4 space-x-3 md:mt-6">
+                            <a href="https://www.nitp.ac.in/profile?id=kamini@nitp.ac.in" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-end px-4 pt-4">
+                        <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
+                            <span class="sr-only">Open dropdown</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                                <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./image/Prof. Fulena Rajak.jpg" alt="Bonnie image"/>
+                        <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Prof. Fulena Rajak</h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">DoAP, NIT Patna</span>
+                        <span class="text-md text-gray-500 dark:text-gray-400 underline">Chief Advisor</span>
+                        <div class="flex mt-4 space-x-3 md:mt-6">
+                            <a href="https://www.nitp.ac.in/profile?id=fulenarajak@nitp.ac.in" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <!--2nd row-->
+                <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-end px-4 pt-4">
+                        <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
+                            <span class="sr-only">Open dropdown</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                                <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./image/Ar. Abhishek Sharma.jpg" alt="Bonnie image"/>
+                        <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Ar. Abhishek Sharma</h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Chairman, IIA Bihar Chapter</span>
+                        <span class="text-md text-gray-500 dark:text-gray-400 underline">Convener</span>
+                        <div class="flex mt-4 space-x-3 md:mt-6">
+                            <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-end px-4 pt-4">
+                        <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
+                            <span class="sr-only">Open dropdown</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                                <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./image/Ar. Ashesh Kumar.jpg" alt="Bonnie image"/>
+                        <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Ar. Ashesh Kumar</h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Vice Chairman, IIA Bihar Chapter</span>
+                        <span class="text-md text-gray-500 dark:text-gray-400 underline">Convener</span>
+                        <div class="flex mt-4 space-x-3 md:mt-6">
+                            <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-end px-4 pt-4">
+                        <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
+                            <span class="sr-only">Open dropdown</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                                <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./image/Prof. Pradip Kumar Jain.jpg" alt="Bonnie image"/>
+                        <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Ar. Amit Kumar</h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Treasurer, IIA Bihar Chapter</span>
+                        <span class="text-md text-gray-500 dark:text-gray-400 underline">Co-Convener</span>
+                        <div class="flex mt-4 space-x-3 md:mt-6">
+                            <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Know MOre</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3rd row -->
+                <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-end px-4 pt-4">
+                        <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
+                            <span class="sr-only">Open dropdown</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                                <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./image/Dr. Kamini Sinha.jpg" alt="Bonnie image"/>
+                        <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Dr. Kamini Sinha</h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Associate Prof., DoAP, NIT Patna</span>
+                        <span class="text-md text-gray-500 dark:text-gray-400 underline">Chairman</span>
+                        <div class="flex mt-4 space-x-3 md:mt-6">
+                            <a href="https://www.nitp.ac.in/profile?id=kamini@nitp.ac.in" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-end px-4 pt-4">
+                        <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
+                            <span class="sr-only">Open dropdown</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                                <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./image/Dr. Shailendra K. Mandal.jpg" alt="Bonnie image"/>
+                        <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Dr. Shailendra K. Mandal</h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Associate Prof., DoAP, NIT Patna</span>
+                        <span class="text-md text-gray-500 dark:text-gray-400 underline">Secretary</span>
+                        <div class="flex mt-4 space-x-3 md:mt-6">
+                            <a href="https://www.nitp.ac.in/profile?id=shailendra@nitp.ac.in" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-end px-4 pt-4">
+                        <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
+                            <span class="sr-only">Open dropdown</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                                <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./image/Ar. Shyam Prasad.jpg" alt="Bonnie image"/>
+                        <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Ar. Shyam Prasad</h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Joint Secretary, IIA Bihar Chapter</span>
+                        <span class="text-md text-gray-500 dark:text-gray-400 underline">Coordinator</span>
+                        <div class="flex mt-4 space-x-3 md:mt-6">
+                            <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4th row -->
+                <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-end px-4 pt-4">
+                        <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
+                            <span class="sr-only">Open dropdown</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                                <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./image/Prof. Pradip Kumar Jain.jpg" alt="Bonnie image"/>
+                        <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Ar. Pradeep Kumar</h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Joint Secretary, IIA Bihar CHapter</span>
+                        <span class="text-md text-gray-500 dark:text-gray-400 underline">Coordinator</span>
+                        <div class="flex mt-4 space-x-3 md:mt-6">
+                            <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-end px-4 pt-4">
+                        <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
+                            <span class="sr-only">Open dropdown</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                                <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./image/Ar. Abhishek Kr. Bittu,.jpg" alt="Bonnie image"/>
+                        <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Ar. Abhishek Kr. Bittu</h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Assist. Prof, DoAP, NIT Patna</span>
+                        <span class="text-md text-gray-500 dark:text-gray-400 underline">Coordinator</span>
+                        <div class="flex mt-4 space-x-3 md:mt-6">
+                            <a href="https://www.nitp.ac.in/profile?id=abhishek.ar@nitp.ac.in" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-end px-4 pt-4">
+                        <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
+                            <span class="sr-only">Open dropdown</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                                <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./image/Ar. Milind M. Kamble.jpg" alt="Bonnie image"/>
+                        <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Ar. Milind M. Kamble</h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Assist. Prof, DoAP, NIT Patna </span>
+                        <span class="text-md text-gray-500 dark:text-gray-400 underline">Coordinator</span>
+                        <div class="flex mt-4 space-x-3 md:mt-6">
+                            <a href="https://www.nitp.ac.in/profile?id=milind.ar@nitp.ac.in" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 5th row -->
+                <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-end px-4 pt-4">
+                        <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
+                            <span class="sr-only">Open dropdown</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                                <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./image/Ar. Preksha Gupta.jpg" alt="Bonnie image"/>
+                        <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Ar. Preksha Gupta</h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Assist. Prof, DoAP, NIT Patna</span>
+                        <span class="text-md text-gray-500 dark:text-gray-400 underline">Coordinator</span>
+                        <div class="flex mt-4 space-x-3 md:mt-6">
+                            <a href="https://www.nitp.ac.in/profile?id=preksha.ar@nitp.ac.in" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-end px-4 pt-4">
+                        <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
+                            <span class="sr-only">Open dropdown</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                                <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./image/Ar. Shubham Meena.jpg" alt="Bonnie image"/>
+                        <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Ar.Shubham Meena</h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Assist. Prof, DoAP ,NITP Patna</span>
+                        <div class="flex mt-4 space-x-3 md:mt-6">
+                            <a href="https://www.nitp.ac.in/profile?id=shubham.ar@nitp.ac.in" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-end px-4 pt-4">
+                        <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
+                            <span class="sr-only">Open dropdown</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                                <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-col items-center pb-10">
+                        <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./image/Ar. Rakesh Kumar.jpg" alt="Bonnie image"/>
+                        <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Ar.Rakesh Kumar</h5>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Assist. Prof, DoAP, NITP Patna</span>
+                        <div class="flex mt-4 space-x-3 md:mt-6">
+                            <a href="https://www.nitp.ac.in/profile?id=rakesh.ar@nitp.ac.in" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Know More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  Footer  -->
+    <footer class="bg-white dark:bg-gray-900">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-between">
+            <div class="flex flex-col space-y-2 sm:gap-6 sm:grid-cols-3">
+                <div class="mb-6 md:mb-0">
+                    <a href="./index.html" class="flex items-center">
+                        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="FlowBite Logo" />
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">CCCHSH-2024</span>
+                    </a>
+                </div>
+                <div class="mb-6 md:mb-0">
+                    <a href="https://www.google.com/maps/place/National+Institute+of+Technology,+Patna/@25.6207961,85.1719948,17z/data=!3m1!4b1!4m6!3m5!1s0x39ed58dce6732867:0x4059f39a1ac82f06!8m2!3d25.6207961!4d85.1719948!16zL20vMDl2OGJq?entry=ttu" class="flex items-center">
+                        <img src="./image/google-maps.png" class="h-8 mr-3" alt="FlowBite Logo" /><p class="text-white">NIT Patna</p>
+                    </a>
+                </div>
+                <div class="mb-6 md:mb-0">
+                    <h1 class="text-lg font bold text-white">Contact Us :-<span href="ccchsh.conf@nitp.ac.in" class="text-blue-700 px-4">ccchsh.conf@nitp.ac.in</span>
+                    </h1>
+                    </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Home</h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <a href="https://rb.gy/37e9w" class="hover:underline ">The Conference
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./schedule.html" class="hover:underline">NIT Patna</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">About Us</h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <a href="https://rb.gy/37e9w" class="hover:underline ">Registration</a>
+                        </li>
+                        <li>
+                            <a href="./schedule.html" class="hover:underline">Schedule</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">CCCHSH™</a>. All Rights Reserved.
+            </span>
+            <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
+                <p class="text-gray-600 font-bold">Designed & Maintained by - Akash Saurav & Deepak Kumar</p>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <!-- Script --> 
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
+
+    <!-- script for dropdown of 'Call for Papers' -->
+    <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+  
+</body>
+</html>

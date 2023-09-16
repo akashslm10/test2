@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" />
+</head>
+<body class="bg-gray-200">
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[99%] mx-auto ">
+            <div>
+                <img class="w-16 cursor-pointer p-1" src="./no-sugar.png" alt="...">
+            </div>
+            <div class="md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li>
+                        <a class="hover:text-gray-500" href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLinkAbout" data-dropdown-toggle="dropdownNavbarAbout" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">About<svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                        <!-- Dropdown menu for "About" -->
+                        <div id="dropdownNavbarAbout" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                            <ul class="py-1" aria-labelledby="dropdownNavbarLinkAbout">
+                                <li>
+                                    <a href="./about.html" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">About Conference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Dates of Importance</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Organising Committee</a>
+                                </li>
+                                <li>
+                                    <a href="./speakers.html" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Conference Speakers</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLinkPaper" data-dropdown-toggle="dropdownNavbarPaper" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover-bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover-text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Call for Paper<svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                        <!-- Dropdown menu for "Call for Paper" -->
+                        <div id="dropdownNavbarPaper" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                            <ul class="py-1" aria-labelledby="dropdownNavbarLinkPaper">
+                                <li>
+                                    <a href="./paperFormat.html" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Papers Format</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Paper Submission</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Mode of Presentation</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLinkRegistration" data-dropdown-toggle="dropdownNavbarRegistration" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover-bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover-text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Registration<svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                        <!-- Dropdown menu for "Registration" -->
+                        <div id="dropdownNavbarRegistration" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                            <ul class="py-1" aria-labelledby="dropdownNavbarLinkRegistration">
+                                <li>
+                                    <a href="https://rb.gy/37e9w" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Offline Registration</a>
+                                </li>
+                                <li>
+                                    <a href="https://rb.gy/37e9w" class="text-sm hover-bg-gray-100 text-gray-700 block px-4 py-2">Online Registration</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="./schedule.html">Technical Programmes</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="./travel.html">Travel</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="./accomodation.html">Accommodation</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="./sponser.html">Sponsorship</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Title for Schedule Page  -->
+    <div class="px-32">
+    <div class="py-5">
+        <h2 class="text-center text-4xl font-bold pl-1 pb-4" style="background: repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px); background-size: 10px 100%; height: auto; background-repeat: repeat;">
+            DATES OF IMPORTANCE & SUBMISSION
+        </h2>
+    </div>
+    <!-- Table layout  -->
+    <div id="table_for_day_1">
+        
+            <table class="  font-inter w-full table-auto border-separate border-spacing-y-1 overflow-scroll text-left md:overflow-auto ">
+            <thead class="w-full rounded-lg bg-[#222E3A]/[6%] text-base font-semibold text-white">
+                <tr class="">
+                <th class="whitespace-nowrap rounded-l-lg py-3 pl-3 text-2xl font-semibold text-[#212B36] ">S. No.</th>
+                <th class="whitespace-nowrap py-3 pl-1 text-2xl font-semibold text-[#212B36] ">DATE</th>
+                <th class="whitespace-nowrap py-3 text-2xl font-semibold text-[#212B36] ">EVENT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="cursor-pointer bg-[#f6f8fa] drop-shadow-[0_0_10px_rgba(34,46,58,0.02)] hover:shadow-2xl">
+                <td class="rounded-l-lg py-4 pl-3 text-xl font-medium text-[#637381]">1.</td>
+                <td class="px-1 py-4 text-xl font-medium text-[#637381]">September 18,2023</td>
+                <td class="px-1 py-4 text-xl font-medium text-[#637381]" style="color:#10B860">Call for Paper</td>
+                </tr>
+                <tr class="cursor-pointer bg-[#f6f8fa] drop-shadow-[0_0_10px_rgba(34,46,58,0.02)] hover:shadow-2xl">
+                <td class="rounded-l-lg py-4 pl-3 text-xl font-medium text-[#637381]">2.</td>
+                <td class="px-1 py-4 text-xl font-medium text-[#637381]">November 06,2023</td>
+                <td class="px-1 py-4 text-xl font-medium text-[#637381]" style="color:#10B860">Abstract Submission</td>
+                </tr>
+                <tr class="cursor-pointer bg-[#f6f8fa] drop-shadow-[0_0_10px_rgba(34,46,58,0.02)] hover:shadow-2xl">
+                    <td class="rounded-l-lg py-4 pl-3 text-xl font-medium text-[#637381]">3.</td>
+                    <td class="px-1 py-4 text-xl font-medium text-[#637381]">November 27, 2023</td>
+                    <td class="px-1 py-4 text-xl font-medium text-[#637381]" style="color:#10B860">Abstract Notification</td>
+                </tr>
+                <tr class="cursor-pointer bg-[#f6f8fa] drop-shadow-[0_0_10px_rgba(34,46,58,0.02)] hover:shadow-2xl">
+                    <td class="rounded-l-lg py-4 pl-3 text-xl font-medium text-[#637381]">4.</td>
+                    <td class="px-1 py-4 text-xl font-medium text-[#637381]">November 18, 2023</td>
+                    <td class="px-1 py-4 text-xl font-medium text-[#637381]" style="color:#10B860">Full Paper Submission</td>
+                </tr>
+                
+                </tr>
+            </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!--  -------------  -->
+    
+    <!-- script for small-sized menu -->
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
+
+    <!-- script for dropdown of 'Call for Papers' -->
+    <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+  
+</body>
+</html>
